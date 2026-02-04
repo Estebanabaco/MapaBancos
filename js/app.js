@@ -32,6 +32,56 @@ const baseMaps = {
 
 L.control.layers(baseMaps).addTo(map);
 
+// Home Control
+const HomeControl = L.Control.extend({
+    options: {
+        position: 'topleft'
+    },
+    onAdd: function (map) {
+        const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+        const button = L.DomUtil.create('a', 'leaflet-control-home', container);
+        button.href = '#';
+        button.title = 'Vista Inicial';
+        button.role = 'button';
+        button.innerHTML = '🏠'; // Simple icon
+        button.style.backgroundColor = 'white';
+        button.style.width = '30px';
+        button.style.height = '30px';
+        button.style.lineHeight = '30px';
+        button.style.textAlign = 'center';
+        button.style.cursor = 'pointer';
+        button.style.display = 'block';
+        button.style.textDecoration = 'none';
+        button.style.fontSize = '18px';
+
+        button.onclick = function (e) {
+            e.preventDefault();
+            map.setView([4.570868, -74.297333], 6);
+
+            // Reset map styles
+            if (departmentsLayer) {
+                departmentsLayer.eachLayer(layer => {
+                    // Re-evaluate style based on data
+                    departmentsLayer.resetStyle(layer);
+                });
+            }
+
+            // Hide info panel
+            const infoPanel = document.getElementById('info-panel');
+            if (infoPanel) infoPanel.classList.add('hidden');
+
+            // Deselect list items
+            document.querySelectorAll('.bank-item').forEach(el => el.classList.remove('active'));
+
+            // Reset Bank List to show all
+            renderBankList(banksData);
+        }
+        return container;
+    }
+});
+
+map.addControl(new HomeControl());
+
 // State variables
 let geoJsonLayer;
 let banksData = [];
@@ -147,7 +197,31 @@ function resetHighlight(e) {
 }
 
 function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds());
+    const layer = e.target;
+    const props = layer.feature.properties;
+    const code = String(props.DPTO_CCDGO || props.COD_DANE || props.id);
+
+    map.flyToBounds(layer.getBounds(), {
+        padding: [50, 50],
+        duration: 1.5,
+        easeLinearity: 0.25
+    });
+
+    // Filter Sidebar List
+    const filteredBanks = banksData.filter(bank => String(bank.dane_code) === code);
+
+    // Update List
+    renderBankList(filteredBanks);
+
+    // Hide Info Panel (since we are showing a list, not a specific bank)
+    const infoPanel = document.getElementById('info-panel');
+    if (infoPanel) infoPanel.classList.add('hidden');
+
+    // If no banks in this department, potentially show a message or keep empty list
+    if (filteredBanks.length === 0) {
+        const listContainer = document.getElementById('bank-list');
+        listContainer.innerHTML = '<div style="padding:1rem; color: #666;">No hay bancos registrados en este departamento.</div>';
+    }
 }
 
 // Function to find department feature by DANE code
@@ -182,7 +256,11 @@ function highlightDepartment(daneCode) {
     if (foundLayer) {
         foundLayer.setStyle(styleHighlight);
         foundLayer.bringToFront();
-        map.fitBounds(foundLayer.getBounds());
+        map.flyToBounds(foundLayer.getBounds(), {
+            padding: [50, 50],
+            duration: 1.5,
+            easeLinearity: 0.25
+        });
     }
 }
 
