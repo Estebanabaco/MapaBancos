@@ -20,7 +20,8 @@ const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
 const map = L.map('map', {
     center: [4.570868, -74.297333],
     zoom: 6,
-    layers: [darkLayer] // Default layer
+    layers: [darkLayer], // Default layer
+    preferCanvas: true
 });
 
 // Filter control
