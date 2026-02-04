@@ -21,7 +21,8 @@ const map = L.map('map', {
     center: [4.570868, -74.297333],
     zoom: 6,
     layers: [darkLayer], // Default layer
-    preferCanvas: true
+    preferCanvas: true,
+    renderer: L.canvas({ padding: 1.5 }) // Increase padding to render more area and reduce glitches
 });
 
 // Filter control
@@ -196,17 +197,33 @@ function resetHighlight(e) {
     departmentsLayer.resetStyle(e.target);
     // Re-apply selection style if needed
 }
+// 2-Step Animation Helper
+function animateAndSelect(layer) {
+    // 1. Fly to Home/Initial View
+    map.flyTo([4.570868, -74.297333], 6, {
+        duration: 1.0,
+        easeLinearity: 0.25
+    });
+
+    // 2. Wait 1/8 second (125ms) then Fly to Target
+    map.once('moveend', () => {
+        setTimeout(() => {
+            map.flyToBounds(layer.getBounds(), {
+                padding: [50, 50],
+                duration: 1.5,
+                easeLinearity: 0.25
+            });
+        }, 125); // 1/8 second pause
+    });
+}
 
 function zoomToFeature(e) {
     const layer = e.target;
     const props = layer.feature.properties;
     const code = String(props.DPTO_CCDGO || props.COD_DANE || props.id);
 
-    map.flyToBounds(layer.getBounds(), {
-        padding: [50, 50],
-        duration: 1.5,
-        easeLinearity: 0.25
-    });
+    // Trigger 2-Step Animation
+    animateAndSelect(layer);
 
     // Filter Sidebar List
     const filteredBanks = banksData.filter(bank => String(bank.dane_code) === code);
@@ -257,11 +274,7 @@ function highlightDepartment(daneCode) {
     if (foundLayer) {
         foundLayer.setStyle(styleHighlight);
         foundLayer.bringToFront();
-        map.flyToBounds(foundLayer.getBounds(), {
-            padding: [50, 50],
-            duration: 1.5,
-            easeLinearity: 0.25
-        });
+        animateAndSelect(foundLayer);
     }
 }
 
