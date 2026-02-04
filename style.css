@@ -203,3 +203,19 @@ body {
 .bank-list::-webkit-scrollbar-thumb:hover {
     background: #aaa; 
 }
+
+/* Custom Tooltip */
+.custom-tooltip {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-orange);
+    color: var(--color-grey);
+    font-family: var(--font-main);
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.leaflet-tooltip-top:before {
+    border-top-color: var(--color-orange);
+}

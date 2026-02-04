@@ -1,12 +1,36 @@
 // Initialize map
-const map = L.map('map').setView([4.570868, -74.297333], 6); // Centered on Colombia
-
-// Add a tile layer (CartoDB Positron for a clean look that fits the brand)
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+// Define Base Layers
+const darkLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     subdomains: 'abcd',
     maxZoom: 20
-}).addTo(map);
+});
+
+const lightLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 20
+});
+
+const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+
+// Initialize map with Dark Layer by default
+const map = L.map('map', {
+    center: [4.570868, -74.297333],
+    zoom: 6,
+    layers: [darkLayer] // Default layer
+});
+
+// Filter control
+const baseMaps = {
+    "Oscuro": darkLayer,
+    "Claro": lightLayer,
+    "Calle": osmLayer
+};
+
+L.control.layers(baseMaps).addTo(map);
 
 // State variables
 let geoJsonLayer;
@@ -24,12 +48,12 @@ const styleDefault = {
 };
 
 const styleNoBank = {
-    fillColor: '#f0f0f0', // Very light grey/white
-    weight: 1,
+    fillColor: '#333333', // Dark Grey for contrast with dark map
+    weight: 1.5,
     opacity: 1,
-    color: '#cccccc', // Light border
+    color: '#666666', // Subtle border
     dashArray: '3',
-    fillOpacity: 0.3
+    fillOpacity: 0.7
 };
 
 const styleHighlight = {
@@ -88,6 +112,17 @@ function initMapLayer(geoData) {
 }
 
 function onEachFeature(feature, layer) {
+    // Add Tooltip
+    const deptName = feature.properties.name || feature.properties.DPTO_CNMBR;
+    if (deptName) {
+        layer.bindTooltip(deptName, {
+            permanent: false,
+            direction: 'top',
+            className: 'custom-tooltip',
+            opacity: 1
+        });
+    }
+
     layer.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight,
