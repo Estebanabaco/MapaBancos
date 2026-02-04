@@ -23,12 +23,24 @@ const styleDefault = {
     fillOpacity: 0.6
 };
 
+const styleNoBank = {
+    fillColor: '#f0f0f0', // Very light grey/white
+    weight: 1,
+    opacity: 1,
+    color: '#cccccc', // Light border
+    dashArray: '3',
+    fillOpacity: 0.3
+};
+
 const styleHighlight = {
     weight: 5,
     color: '#F58634', // Orange
     dashArray: '',
     fillOpacity: 0.7
 };
+
+// Data Helpers
+let activeDaneCodes = new Set();
 
 // Load Data
 async function loadData() {
@@ -41,6 +53,13 @@ async function loadData() {
         const banksResponse = await fetch('data/bancos.json');
         banksData = await banksResponse.json();
 
+        // Extract active DANE codes
+        banksData.forEach(bank => {
+            if (bank.dane_code) {
+                activeDaneCodes.add(String(bank.dane_code));
+            }
+        });
+
         initMapLayer(geoData);
         renderBankList(banksData);
 
@@ -49,9 +68,21 @@ async function loadData() {
     }
 }
 
+function getFeatureStyle(feature) {
+    // Attempt to find DANE code in properties
+    const props = feature.properties;
+    const code = String(props.DPTO_CCDGO || props.COD_DANE || props.id);
+
+    if (activeDaneCodes.has(code)) {
+        return styleDefault;
+    } else {
+        return styleNoBank;
+    }
+}
+
 function initMapLayer(geoData) {
     departmentsLayer = L.geoJson(geoData, {
-        style: styleDefault,
+        style: getFeatureStyle,
         onEachFeature: onEachFeature
     }).addTo(map);
 }
