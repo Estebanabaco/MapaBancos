@@ -22,7 +22,14 @@ const map = L.map('map', {
     zoom: 6,
     layers: [darkLayer], // Default layer
     preferCanvas: true,
-    renderer: L.canvas({ padding: 1.5 }) // Increase padding to render more area and reduce glitches
+    renderer: L.canvas({ padding: 1.5 }), // Increase padding to render more area and reduce glitches
+    zoomControl: false,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    dragging: false,
+    touchZoom: false,
+    boxZoom: false,
+    keyboard: false
 });
 
 // Filter control
@@ -35,54 +42,7 @@ const baseMaps = {
 L.control.layers(baseMaps).addTo(map);
 
 // Home Control
-const HomeControl = L.Control.extend({
-    options: {
-        position: 'topleft'
-    },
-    onAdd: function (map) {
-        const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
-        const button = L.DomUtil.create('a', 'leaflet-control-home', container);
-        button.href = '#';
-        button.title = 'Vista Inicial';
-        button.role = 'button';
-        button.innerHTML = '🏠'; // Simple icon
-        button.style.backgroundColor = 'white';
-        button.style.width = '30px';
-        button.style.height = '30px';
-        button.style.lineHeight = '30px';
-        button.style.textAlign = 'center';
-        button.style.cursor = 'pointer';
-        button.style.display = 'block';
-        button.style.textDecoration = 'none';
-        button.style.fontSize = '18px';
 
-        button.onclick = function (e) {
-            e.preventDefault();
-            map.setView([4.570868, -74.297333], 6);
-
-            // Reset map styles
-            if (departmentsLayer) {
-                departmentsLayer.eachLayer(layer => {
-                    // Re-evaluate style based on data
-                    departmentsLayer.resetStyle(layer);
-                });
-            }
-
-            // Hide info panel
-            const infoPanel = document.getElementById('info-panel');
-            if (infoPanel) infoPanel.classList.add('hidden');
-
-            // Deselect list items
-            document.querySelectorAll('.bank-item').forEach(el => el.classList.remove('active'));
-
-            // Reset Bank List to show all
-            renderBankList(banksData);
-        }
-        return container;
-    }
-});
-
-map.addControl(new HomeControl());
 
 // State variables
 let geoJsonLayer;
@@ -198,24 +158,7 @@ function resetHighlight(e) {
     // Re-apply selection style if needed
 }
 // 2-Step Animation Helper
-function animateAndSelect(layer) {
-    // 1. Fly to Home/Initial View
-    map.flyTo([4.570868, -74.297333], 6, {
-        duration: 1.0,
-        easeLinearity: 0.25
-    });
 
-    // 2. Wait 1/8 second (125ms) then Fly to Target
-    map.once('moveend', () => {
-        setTimeout(() => {
-            map.flyToBounds(layer.getBounds(), {
-                padding: [50, 50],
-                duration: 1.5,
-                easeLinearity: 0.25
-            });
-        }, 125); // 1/8 second pause
-    });
-}
 
 function zoomToFeature(e) {
     const layer = e.target;
@@ -223,7 +166,7 @@ function zoomToFeature(e) {
     const code = String(props.DPTO_CCDGO || props.COD_DANE || props.id);
 
     // Trigger 2-Step Animation
-    animateAndSelect(layer);
+    // animateAndSelect(layer); // Zoom Removed
 
     // Filter Sidebar List
     const filteredBanks = banksData.filter(bank => String(bank.dane_code) === code);
@@ -274,7 +217,7 @@ function highlightDepartment(daneCode) {
     if (foundLayer) {
         foundLayer.setStyle(styleHighlight);
         foundLayer.bringToFront();
-        animateAndSelect(foundLayer);
+        // animateAndSelect(foundLayer); // Zoom Removed
     }
 }
 
