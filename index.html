@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Bancos de Alimentos - ABACO</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="logo-container">
+                <!-- Placeholder for Logo or Brand Name if image is not available -->
+                <h1 class="brand-title">ABACO</h1>
+                <p class="brand-subtitle">Asociación de Bancos de Alimentos de Colombia</p>
+            </div>
+        </header>
+
+        <main class="content-wrapper">
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h2>Bancos de Alimentos</h2>
+                    <p>Selecciona un banco para ver su ubicación.</p>
+                </div>
+                <div id="bank-list" class="bank-list">
+                    <!-- Banks will be loaded here via JS -->
+                </div>
+            </aside>
+
+            <section class="map-section">
+                <div id="map"></div>
+                <div id="info-panel" class="info-panel hidden">
+                    <h3 id="info-bank-name">Nombre del Banco</h3>
+                    <p id="info-bank-address">Dirección del Banco</p>
+                    <span id="info-dept-name" class="dept-badge">Departamento</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

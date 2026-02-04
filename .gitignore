@@ -1,0 +1,17 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+
+# Node modules (if you add npm later)
+node_modules/
+
+# Python cache (if you run python server)
+__pycache__/

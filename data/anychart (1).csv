@@ -1,0 +1,34 @@
+﻿id;value;name;banks;addresses
+CO.AN;1;Antioquia;Fundación Saciar, Fundacion Banco Arquidiocesano de Alimentos de Medellín;Carrera 50 Nº 25 - 261 Medellín, Carrera 52 30 A 97 Medellín
+CO.AT;1;Atlántico;Pastoral Social Barranquilla;CALLE 53C N° 31 - 121 Barrio lucero Barranquilla
+CO.1136;1;Bogotá;Fundación Banco Arquidiocesano de Alimentos de Bogotá;Calle 19 A # 32-50 Bogotá
+CO.BL;1;Bolívar;Banco Arquidiocesano de Alimentos de Cartagena;Parque Industrial Ternera bodega 51 Cartagena
+CO.CA;1;Caldas;Banco Arquidiocesano de Alimentos de Manizales;Calle 49 Nº 27a 85 Manizales
+CO.CO;1;Cesar;Banco de Alimentos de Valledupar;Parque de la Leyenda Vallenata - Cra 4 Valledupar
+CO.CS;1;Córdoba;Diocesis de Monteria - Banco de Alimentos de Montería;calle 29 # 12-50 Montería
+CO.CU;1;Cundinamarca;Fundacion Banco de Alimentos Diocesis de Zipaquira;cra 36 # 8-442 Bodega 14 - terminal logístico empresarial la paz. Zipaquirá
+CO.LG;1;La Guajira;Banco de Alimentos de la Guajira;Calle 28a N°12b-19 La Guajira
+CO.HU;1;Huila;Fundacion Banco Diocesano de Alimentos de Neiva;Calle 33 sur 22 129 Zona Industrial Neiva
+CO.MA;1;Magdalena;Pastoral Social Santa Marta;Parque Logístico Industrial PAS bodega A36 km 3 vía a Gaira Santa Marta
+CO.ME;1;Meta;Pastoral Social Banco de Alimentos de Villavicencio;CALLE 23 C 22 - 02 BARRIO RETIRO Villavicencio
+CO.NA;1;Nariño;Banco Diocesano de Alimentos de Pasto;Cra 13 N° 20a-18 Barrio El Recuerdo Pasto
+CO.NS;1;Norte de Santander;Fundacion Banco Diocesano de Alimentos Mons. Oscar Urbina Ortega;CALLE 2AN 1 26 PESCADERO Cúcuta
+CO.QD;1;Quindío;Banco de Alimentos Monseñor Roberto Lopez;Calle 21 N. 12-25 Quindío
+CO.RI;1;Risaralda;Fundación Caritas Banco de Alimentos de Pereira;Transversal 5 N°6-30 Calle de las Aromas la Badea Dosquebradas Pereira
+CO.SA;1;San Andrés;Banco de Alimentos Bread Fruit;San Luís Sector Sound Bay San Andrés
+CO.ST;1;Santander;Banco de Alimentos Arquidiocesis de Bucaramanga;carrera 20 # 11-46 Bucaramanga
+CO.SU;1;Sucre;Banco de Alimentos de Sincelejo;CR 4 29D-108 transversal vía a tolú sector el cas Sincelejo
+CO.TO;1;Tolima;Banco Arquidiocesano de Alimentos de Ibagué;Cra 4 Estadio No 23-42 Ibagué
+CO.VC;1;Valle del Cauca;Fundacion Arquidiocesana Banco de Alimentos de Cali, Fundación Banco Diocesano de Alimentos de Cartago, Banco de Alimentos de Buenaventura;calle 24 #6-103 Cali, calle 6 #3-46 Cartago, Cr40 calle 5 No. 5-13 Rockefeller Buenaventura
+CO.AM;0;Amazonas;;
+CO.AR;0;Arauca;;
+CO.BY;0;Boyacá;;
+CO.CQ;0;Caquetá;;
+CO.CE;0;Casanare;;
+CO.CL;0;Cauca;;
+CO.CH;0;Chocó;;
+CO.GN;0;Guainía;;
+CO.GV;0;Guaviare;;
+CO.PU;0;Putumayo;;
+CO.VP;0;Vaupés;;
+CO.VD;0;Vichada;;

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "CO.AN",
+    "value": 1,
+    "name": "Antioquia",
+    "dane_code": "05",
+    "bank": "Fundación Saciar",
+    "address": "Carrera 50 Nº 25 - 261 Medellín"
+  },
+  {
+    "id": "CO.AN",
+    "value": 1,
+    "name": "Antioquia",
+    "dane_code": "05",
+    "bank": "Fundacion Banco Arquidiocesano de Alimentos de Medellín",
+    "address": "Carrera 52 30 A 97 Medellín"
+  },
+  {
+    "id": "CO.AT",
+    "value": 1,
+    "name": "Atlántico",
+    "dane_code": "08",
+    "bank": "Pastoral Social Barranquilla",
+    "address": "CALLE 53C N° 31 - 121 Barrio lucero Barranquilla"
+  },
+  {
+    "id": "CO.1136",
+    "value": 1,
+    "name": "Bogotá",
+    "dane_code": "11",
+    "bank": "Fundación Banco Arquidiocesano de Alimentos de Bogotá",
+    "address": "Calle 19 A # 32-50 Bogotá"
+  },
+  {
+    "id": "CO.BL",
+    "value": 1,
+    "name": "Bolívar",
+    "dane_code": "13",
+    "bank": "Banco Arquidiocesano de Alimentos de Cartagena",
+    "address": "Parque Industrial Ternera bodega 51 Cartagena"
+  },
+  {
+    "id": "CO.CA",
+    "value": 1,
+    "name": "Caldas",
+    "dane_code": "17",
+    "bank": "Banco Arquidiocesano de Alimentos de Manizales",
+    "address": "Calle 49 Nº 27a 85 Manizales"
+  },
+  {
+    "id": "CO.CO",
+    "value": 1,
+    "name": "Cesar",
+    "dane_code": "20",
+    "bank": "Banco de Alimentos de Valledupar",
+    "address": "Parque de la Leyenda Vallenata - Cra 4 Valledupar"
+  },
+  {
+    "id": "CO.CS",
+    "value": 1,
+    "name": "Córdoba",
+    "dane_code": "23",
+    "bank": "Diocesis de Monteria - Banco de Alimentos de Montería",
+    "address": "calle 29 # 12-50 Montería"
+  },
+  {
+    "id": "CO.CU",
+    "value": 1,
+    "name": "Cundinamarca",
+    "dane_code": "25",
+    "bank": "Fundacion Banco de Alimentos Diocesis de Zipaquira",
+    "address": "cra 36 # 8-442 Bodega 14 - terminal logístico empresarial la paz. Zipaquirá"
+  },
+  {
+    "id": "CO.LG",
+    "value": 1,
+    "name": "La Guajira",
+    "dane_code": "44",
+    "bank": "Banco de Alimentos de la Guajira",
+    "address": "Calle 28a N°12b-19 La Guajira"
+  },
+  {
+    "id": "CO.HU",
+    "value": 1,
+    "name": "Huila",
+    "dane_code": "41",
+    "bank": "Fundacion Banco Diocesano de Alimentos de Neiva",
+    "address": "Calle 33 sur 22 129 Zona Industrial Neiva"
+  },
+  {
+    "id": "CO.MA",
+    "value": 1,
+    "name": "Magdalena",
+    "dane_code": "47",
+    "bank": "Pastoral Social Santa Marta",
+    "address": "Parque Logístico Industrial PAS bodega A36 km 3 vía a Gaira Santa Marta"
+  },
+  {
+    "id": "CO.ME",
+    "value": 1,
+    "name": "Meta",
+    "dane_code": "50",
+    "bank": "Pastoral Social Banco de Alimentos de Villavicencio",
+    "address": "CALLE 23 C 22 - 02 BARRIO RETIRO Villavicencio"
+  },
+  {
+    "id": "CO.NA",
+    "value": 1,
+    "name": "Nariño",
+    "dane_code": "52",
+    "bank": "Banco Diocesano de Alimentos de Pasto",
+    "address": "Cra 13 N° 20a-18 Barrio El Recuerdo Pasto"
+  },
+  {
+    "id": "CO.NS",
+    "value": 1,
+    "name": "Norte de Santander",
+    "dane_code": "54",
+    "bank": "Fundacion Banco Diocesano de Alimentos Mons. Oscar Urbina Ortega",
+    "address": "CALLE 2AN 1 26 PESCADERO Cúcuta"
+  },
+  {
+    "id": "CO.QD",
+    "value": 1,
+    "name": "Quindío",
+    "dane_code": "63",
+    "bank": "Banco de Alimentos Monseñor Roberto Lopez",
+    "address": "Calle 21 N. 12-25 Quindío"
+  },
+  {
+    "id": "CO.RI",
+    "value": 1,
+    "name": "Risaralda",
+    "dane_code": "66",
+    "bank": "Fundación Caritas Banco de Alimentos de Pereira",
+    "address": "Transversal 5 N°6-30 Calle de las Aromas la Badea Dosquebradas Pereira"
+  },
+  {
+    "id": "CO.SA",
+    "value": 1,
+    "name": "San Andrés",
+    "dane_code": "88",
+    "bank": "Banco de Alimentos Bread Fruit",
+    "address": "San Luís Sector Sound Bay San Andrés"
+  },
+  {
+    "id": "CO.ST",
+    "value": 1,
+    "name": "Santander",
+    "dane_code": "68",
+    "bank": "Banco de Alimentos Arquidiocesis de Bucaramanga",
+    "address": "carrera 20 # 11-46 Bucaramanga"
+  },
+  {
+    "id": "CO.SU",
+    "value": 1,
+    "name": "Sucre",
+    "dane_code": "70",
+    "bank": "Banco de Alimentos de Sincelejo",
+    "address": "CR 4 29D-108 transversal vía a tolú sector el cas Sincelejo"
+  },
+  {
+    "id": "CO.TO",
+    "value": 1,
+    "name": "Tolima",
+    "dane_code": "73",
+    "bank": "Banco Arquidiocesano de Alimentos de Ibagué",
+    "address": "Cra 4 Estadio No 23-42 Ibagué"
+  },
+  {
+    "id": "CO.VC",
+    "value": 1,
+    "name": "Valle del Cauca",
+    "dane_code": "76",
+    "bank": "Fundacion Arquidiocesana Banco de Alimentos de Cali",
+    "address": "calle 24 #6-103 Cali"
+  },
+  {
+    "id": "CO.VC",
+    "value": 1,
+    "name": "Valle del Cauca",
+    "dane_code": "76",
+    "bank": "Fundación Banco Diocesano de Alimentos de Cartago",
+    "address": "calle 6 #3-46 Cartago"
+  },
+  {
+    "id": "CO.VC",
+    "value": 1,
+    "name": "Valle del Cauca",
+    "dane_code": "76",
+    "bank": "Banco de Alimentos de Buenaventura",
+    "address": "Cr40 calle 5 No. 5-13 Rockefeller Buenaventura"
+  }
+]
