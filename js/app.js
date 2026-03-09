@@ -259,5 +259,29 @@ function selectBank(bank, itemElement) {
     }
 }
 
+// Function to get initial map center and zoom if needed
+function resetMapView() {
+    // 1. Reset map view parameters if they were changed 
+    // (currently drag/zoom is disabled but good practice if enabled later)
+    // map.setView([4.570868, -74.297333], 6);
+
+    // 2. Hide Info Panel
+    const infoPanel = document.getElementById('info-panel');
+    if (infoPanel) infoPanel.classList.add('hidden');
+
+    // 3. Reset Department Highlights
+    if (departmentsLayer) {
+        departmentsLayer.eachLayer(layer => {
+            departmentsLayer.resetStyle(layer);
+        });
+    }
+
+    // 4. Reload full bank list
+    renderBankList(banksData);
+}
+
+// Event listener for reset button
+document.getElementById('reset-btn').addEventListener('click', resetMapView);
+
 // Start
 loadData();

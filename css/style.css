@@ -87,6 +87,36 @@ body {
 .sidebar-header p {
     font-size: 0.9rem;
     opacity: 0.9;
+    margin-bottom: 0.8rem;
+}
+
+.reset-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 0.6rem;
+    background-color: var(--color-white);
+    color: var(--color-green);
+    border: none;
+    border-radius: 6px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.reset-btn:hover {
+    background-color: var(--color-light-grey);
+    color: var(--color-orange);
+    transform: translateY(-1px);
+}
+
+.reset-btn:active {
+    transform: translateY(1px);
 }
 
 .bank-list {
