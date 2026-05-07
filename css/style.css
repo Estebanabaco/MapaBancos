@@ -249,3 +249,91 @@ body {
 .leaflet-tooltip-top:before {
     border-top-color: var(--color-orange);
 }
+
+/* Contact Section */
+.contact-section,
+.social-section,
+.contact-person-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.contact-section h4,
+.social-section h4,
+.contact-person-section h4 {
+    font-size: 0.85rem;
+    color: var(--color-grey);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.contact-label {
+    color: #888;
+    min-width: 50px;
+}
+
+.contact-item a {
+    color: var(--color-orange);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media */
+.social-links {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-light-grey);
+    color: var(--color-grey);
+    transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--color-orange);
+    color: white;
+    transform: scale(1.1);
+}
+
+.social-icon i {
+    font-size: 16px;
+}
+
+/* Contact Person */
+.contact-person-name {
+    font-weight: 600;
+    color: var(--color-grey);
+    margin-bottom: 0.5rem;
+}
+
+.contact-person-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}

@@ -253,6 +253,72 @@ function selectBank(bank, itemElement) {
     document.getElementById('info-dept-name').textContent = bank.name;
     infoPanel.classList.remove('hidden');
 
+    // Contact info
+    const phoneEl = document.getElementById('info-phone');
+    const mobileEl = document.getElementById('info-mobile');
+    const emailEl = document.getElementById('info-email');
+    const websiteEl = document.getElementById('info-website');
+
+    if (bank.phone && bank.phone !== 'NA') {
+        phoneEl.textContent = bank.phone;
+        phoneEl.href = 'tel:' + bank.phone;
+        document.getElementById('info-phone-row').style.display = 'flex';
+    } else {
+        document.getElementById('info-phone-row').style.display = 'none';
+    }
+
+    if (bank.mobile) {
+        mobileEl.textContent = bank.mobile;
+        mobileEl.href = 'tel:' + bank.mobile;
+        document.getElementById('info-mobile-row').style.display = 'flex';
+    } else {
+        document.getElementById('info-mobile-row').style.display = 'none';
+    }
+
+    if (bank.email) {
+        emailEl.textContent = bank.email;
+        emailEl.href = 'mailto:' + bank.email;
+        document.getElementById('info-email-row').style.display = 'flex';
+    } else {
+        document.getElementById('info-email-row').style.display = 'none';
+    }
+
+    if (bank.website) {
+        websiteEl.textContent = bank.website;
+        websiteEl.href = bank.website;
+        document.getElementById('info-website-row').style.display = 'flex';
+    } else {
+        document.getElementById('info-website-row').style.display = 'none';
+    }
+
+    // Contact person
+    const contactNameEl = document.getElementById('info-contact-name');
+    const contactPhoneEl = document.getElementById('info-contact-phone');
+    const contactEmailEl = document.getElementById('info-contact-email');
+
+    if (bank.contact) {
+        contactNameEl.textContent = bank.contact;
+        contactNameEl.style.display = 'block';
+    } else {
+        contactNameEl.style.display = 'none';
+    }
+
+    if (bank.contactPhone) {
+        contactPhoneEl.textContent = bank.contactPhone;
+        contactPhoneEl.href = 'tel:' + bank.contactPhone;
+        document.getElementById('info-contact-phone-row').style.display = 'flex';
+    } else {
+        document.getElementById('info-contact-phone-row').style.display = 'none';
+    }
+
+    if (bank.contactEmail) {
+        contactEmailEl.textContent = bank.contactEmail;
+        contactEmailEl.href = 'mailto:' + bank.contactEmail;
+        document.getElementById('info-contact-email-row').style.display = 'flex';
+    } else {
+        document.getElementById('info-contact-email-row').style.display = 'none';
+    }
+
     // Highlight map department
     if (bank.dane_code) {
         highlightDepartment(bank.dane_code);

@@ -5,7 +5,22 @@
     "name": "Antioquia",
     "dane_code": "05",
     "bank": "Fundación Saciar",
-    "address": "Carrera 50 Nº 25 - 261 Medellín"
+    "address": "Carrera 50 Nº 25 - 261 Medellín",
+    "phone": "6713408",
+    "mobile": "3176461425",
+    "email": "administracion@saciar.org.co",
+    "social": {
+      "facebook": "https://www.facebook.com/fundacionsaciar",
+      "instagram": "@FundacionSaciar",
+      "x": "@FundacionSaciar",
+      "youtube": "Fundación SACIAR, Banco de Alimentos",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://saciar.org.co",
+    "contact": "Jorge Andrés Sepúlveda",
+    "contactPhone": "",
+    "contactEmail": "comunicaciones@saciar.org.co"
   },
   {
     "id": "CO.AN",
@@ -13,7 +28,22 @@
     "name": "Antioquia",
     "dane_code": "05",
     "bank": "Fundacion Banco Arquidiocesano de Alimentos de Medellín",
-    "address": "Carrera 52 30 A 97 Medellín"
+    "address": "Carrera 52 30 A 97 Medellín",
+    "phone": "7470828",
+    "mobile": "",
+    "email": "direccion@bancodealimentos.co",
+    "social": {
+      "facebook": "https://www.facebook.com/FUBAM",
+      "instagram": "@fubam_",
+      "x": "@FUBAM1",
+      "youtube": "FUBAMEDELLIN",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://saciar.org/",
+    "contact": "Yinna Andrea Puerta",
+    "contactPhone": "",
+    "contactEmail": "atencioninstituciones@bancodealimentos.co"
   },
   {
     "id": "CO.AT",
@@ -21,7 +51,22 @@
     "name": "Atlántico",
     "dane_code": "08",
     "bank": "Pastoral Social Barranquilla",
-    "address": "CALLE 53C N° 31 - 121 Barrio lucero Barranquilla"
+    "address": "CALLE 53C N° 31 - 121 Barrio lucero Barranquilla",
+    "phone": "4483888",
+    "mobile": "3176986273",
+    "email": "dirgestionsocial@pastoralsocialbaq.org",
+    "social": {
+      "facebook": "https://www.facebook.com/Banco%20Arquidiocesano%20de%20Alimentos%20Barranquilla",
+      "instagram": "@banalimentos.baq",
+      "x": "@balimentosbaq",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://pastoralsocialbaq.org/banco-de-alimentos/",
+    "contact": "Alejandra Campo",
+    "contactPhone": "3176986273",
+    "contactEmail": "comunicaciones1@pastoralsocialbaq.org"
   },
   {
     "id": "CO.1136",
@@ -29,7 +74,22 @@
     "name": "Bogotá",
     "dane_code": "11",
     "bank": "Fundación Banco Arquidiocesano de Alimentos de Bogotá",
-    "address": "Calle 19 A # 32-50 Bogotá"
+    "address": "Calle 19 A # 32-50 Bogotá",
+    "phone": "7271282",
+    "mobile": "",
+    "email": "direccion@bancodealimentos.org.co",
+    "social": {
+      "facebook": "https://www.facebook.com/bancodealimentosbogota",
+      "instagram": "@bancodealimentosbgt",
+      "x": "@BancoAalimentos",
+      "youtube": "Banco de Alimentos de Bogotá",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://www.bancodealimentos.org.co/",
+    "contact": "Yurady Morales",
+    "contactPhone": "3143668271",
+    "contactEmail": "donantes@bancodealimentos.org.co"
   },
   {
     "id": "CO.BL",
@@ -37,7 +97,22 @@
     "name": "Bolívar",
     "dane_code": "13",
     "bank": "Banco Arquidiocesano de Alimentos de Cartagena",
-    "address": "Parque Industrial Ternera bodega 51 Cartagena"
+    "address": "Parque Industrial Ternera bodega 51 Cartagena",
+    "phone": "3205498403",
+    "mobile": "3127317928",
+    "email": "bancodealimentosdecartagena@gmail.com",
+    "social": {
+      "facebook": "https://www.facebook.com/bancoalimetoscartagenadeindias",
+      "instagram": "@bancoalimentoscartagena",
+      "x": "@BancoAlimentosC",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://www.bancodealimentoscartagena.com.co/",
+    "contact": "Wendy Carolina Borja",
+    "contactPhone": "3205490483",
+    "contactEmail": "donacionesbancoalimentosctg@gmail.com"
   },
   {
     "id": "CO.CA",
@@ -45,7 +120,22 @@
     "name": "Caldas",
     "dane_code": "17",
     "bank": "Banco Arquidiocesano de Alimentos de Manizales",
-    "address": "Calle 49 Nº 27a 85 Manizales"
+    "address": "Calle 49 Nº 27a 85 Manizales",
+    "phone": "6068987212",
+    "mobile": "3104184472",
+    "email": "bancoalimentosmanizales@gmail.com",
+    "social": {
+      "facebook": "https://www.facebook.com/pastoralsocialcaritasmanizales",
+      "instagram": "@bancodealimentosmanizales",
+      "x": "",
+      "youtube": "https://www.youtube.com/@bancodealimentosmanizales",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://bancodealimentosmanizales.org/",
+    "contact": "Maria Camila Posada Hoyos",
+    "contactPhone": "3117025483",
+    "contactEmail": "bancoalimentosmanizales@gmail.com"
   },
   {
     "id": "CO.CO",
@@ -53,7 +143,22 @@
     "name": "Cesar",
     "dane_code": "20",
     "bank": "Banco de Alimentos de Valledupar",
-    "address": "Parque de la Leyenda Vallenata - Cra 4 Valledupar"
+    "address": "Parque de la Leyenda Vallenata - Cra 4 Valledupar",
+    "phone": "",
+    "mobile": "3243588537",
+    "email": "bancodealimentosvalledupar@gmail.com",
+    "social": {
+      "facebook": "",
+      "instagram": "@pastoralsocialvup",
+      "x": "@pastoralsocial7",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "",
+    "contact": "Luis Villegaz",
+    "contactPhone": "300 7578144",
+    "contactEmail": "comunicacionespdv@gmail.com"
   },
   {
     "id": "CO.CS",
@@ -61,7 +166,22 @@
     "name": "Córdoba",
     "dane_code": "23",
     "bank": "Diocesis de Monteria - Banco de Alimentos de Montería",
-    "address": "calle 29 # 12-50 Montería"
+    "address": "calle 29 # 12-50 Montería",
+    "phone": "",
+    "mobile": "3145070664",
+    "email": "bancodiocesanodealimentos@obispadomonteria.org",
+    "social": {
+      "facebook": "https://www.facebook.com/bancodealimentos.diocesisdemonteria",
+      "instagram": "@bancodealimentosmonteria",
+      "x": "@BdAMonteria",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://caritascolombiana.org/diocesis-de-monteria-el-banco-de-alimentos-al-servicio-de-la-poblacion-mas-vulnerable/",
+    "contact": "Mayra Castro López",
+    "contactPhone": "3145070664",
+    "contactEmail": "bancodiocesanodealimentos@obispadomonteria.org"
   },
   {
     "id": "CO.CU",
@@ -69,7 +189,22 @@
     "name": "Cundinamarca",
     "dane_code": "25",
     "bank": "Fundacion Banco de Alimentos Diocesis de Zipaquira",
-    "address": "cra 36 # 8-442 Bodega 14 - terminal logístico empresarial la paz. Zipaquirá"
+    "address": "cra 36 # 8-442 Bodega 14 - terminal logístico empresarial la paz. Zipaquirá",
+    "phone": "6634949",
+    "mobile": "",
+    "email": "badizi@diocesisdezipaquira.org",
+    "social": {
+      "facebook": "https://www.facebook.com/badizi@diocesisdezipaquira.org",
+      "instagram": "@bancodealimentoszipaquira",
+      "x": "@badizipaquira",
+      "youtube": "",
+      "linkedin": "https://www.linkedin.com/in/banco-de-alimentos-diocesis-de-zipaquira-a5479335b/",
+      "tiktok": ""
+    },
+    "website": "https://bancodealimentoszipaquira.org/",
+    "contact": "Natalia Sánchez Rodríguez",
+    "contactPhone": "3124922650",
+    "contactEmail": "badizi@diocesisdezipaquira.org"
   },
   {
     "id": "CO.LG",
@@ -77,7 +212,22 @@
     "name": "La Guajira",
     "dane_code": "44",
     "bank": "Banco de Alimentos de la Guajira",
-    "address": "Calle 28a N°12b-19 La Guajira"
+    "address": "Calle 28a N°12b-19 La Guajira",
+    "phone": "",
+    "mobile": "3136843451",
+    "email": "comunicaciones@balguajira.org",
+    "social": {
+      "facebook": "https://www.facebook.com/bancodealimentoslaguajira",
+      "instagram": "bancodealimentoslaguajira",
+      "x": "@bancoalguajira",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://balguajira.org",
+    "contact": "Ingrid Gómez",
+    "contactPhone": "",
+    "contactEmail": "comunicacionesbalg@gmail.com"
   },
   {
     "id": "CO.HU",
@@ -85,7 +235,22 @@
     "name": "Huila",
     "dane_code": "41",
     "bank": "Fundacion Banco Diocesano de Alimentos de Neiva",
-    "address": "Calle 33 sur 22 129 Zona Industrial Neiva"
+    "address": "Calle 33 sur 22 129 Zona Industrial Neiva",
+    "phone": "8732266",
+    "mobile": "3112647951",
+    "email": "bdaneiva@yahoo.es",
+    "social": {
+      "facebook": "https://www.facebook.com/bancodiocesanodealimentosneiva",
+      "instagram": "@bancodealimentosneiva",
+      "x": "@BancoNeiva",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "",
+    "contact": "Carlos Andrés Carvajal",
+    "contactPhone": "",
+    "contactEmail": "bdaneiva@yahoo.es"
   },
   {
     "id": "CO.MA",
@@ -93,7 +258,22 @@
     "name": "Magdalena",
     "dane_code": "47",
     "bank": "Pastoral Social Santa Marta",
-    "address": "Parque Logístico Industrial PAS bodega A36 km 3 vía a Gaira Santa Marta"
+    "address": "Parque Logístico Industrial PAS bodega A36 km 3 vía a Gaira Santa Marta",
+    "phone": "3154138",
+    "mobile": "3104297526",
+    "email": "basantamarta@sdpss.org",
+    "social": {
+      "facebook": "https://www.facebook.com/bancodealimemtossantamarta",
+      "instagram": "@bancodealimentosincelejo",
+      "x": "@bancodealiment7",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://bancodealimentossm.org",
+    "contact": "P. Harold Tejada",
+    "contactPhone": "",
+    "contactEmail": "haroldtejada@sdpss.org"
   },
   {
     "id": "CO.ME",
@@ -101,7 +281,22 @@
     "name": "Meta",
     "dane_code": "50",
     "bank": "Pastoral Social Banco de Alimentos de Villavicencio",
-    "address": "CALLE 23 C 22 - 02 BARRIO RETIRO Villavicencio"
+    "address": "CALLE 23 C 22 - 02 BARRIO RETIRO Villavicencio",
+    "phone": "",
+    "mobile": "3102566549",
+    "email": "banco.villavicencio@gmail.com",
+    "social": {
+      "facebook": "https://www.facebook.com/BancodealimentosdeVillavicencio",
+      "instagram": "@bancodealimentosvillavicencio",
+      "x": "@Bancodealiment2",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://balvillavicencio.org",
+    "contact": "Lenis Poloche",
+    "contactPhone": "3102566549",
+    "contactEmail": "comunicacionesbancoalimentos@gmail.com"
   },
   {
     "id": "CO.NA",
@@ -109,7 +304,22 @@
     "name": "Nariño",
     "dane_code": "52",
     "bank": "Banco Diocesano de Alimentos de Pasto",
-    "address": "Cra 13 N° 20a-18 Barrio El Recuerdo Pasto"
+    "address": "Cra 13 N° 20a-18 Barrio El Recuerdo Pasto",
+    "phone": "",
+    "mobile": "3226138427",
+    "email": "balimentos@pastoralsocialpasto.org.co",
+    "social": {
+      "facebook": "",
+      "instagram": "",
+      "x": "",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://pastoralsocialpasto.org.co/index.php/headers/area-humanitaria/banco-de-alimentos",
+    "contact": "Jorge Moncayo",
+    "contactPhone": "",
+    "contactEmail": "jmoncayo@pastoralsocialpasto.org.co"
   },
   {
     "id": "CO.NS",
@@ -117,7 +327,22 @@
     "name": "Norte de Santander",
     "dane_code": "54",
     "bank": "Fundacion Banco Diocesano de Alimentos Mons. Oscar Urbina Ortega",
-    "address": "CALLE 2AN 1 26 PESCADERO Cúcuta"
+    "address": "CALLE 2AN 1 26 PESCADERO Cúcuta",
+    "phone": "29624927",
+    "mobile": "",
+    "email": "administracion_bda@diocesisdecucuta.com",
+    "social": {
+      "facebook": "https://www.facebook.com/bancodiocesanodealimentos",
+      "instagram": "",
+      "x": "@bdacucuta",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://balcucuta.org",
+    "contact": "Ingrid Sánchez",
+    "contactPhone": "",
+    "contactEmail": "proyectos_bda@diocesisdecucuta.com"
   },
   {
     "id": "CO.QD",
@@ -125,7 +350,22 @@
     "name": "Quindío",
     "dane_code": "63",
     "bank": "Banco de Alimentos Monseñor Roberto Lopez",
-    "address": "Calle 21 N. 12-25 Quindío"
+    "address": "Calle 21 N. 12-25 Quindío",
+    "phone": "3705950",
+    "mobile": "",
+    "email": "pastoralsocial.armenia@gmail.com",
+    "social": {
+      "facebook": "https://www.facebook.com/Banco%20de%20Alimentos%20Mons.%20Roberto%20Lopez%20Londono.%20Armenia-%20Quind%C3%ADo",
+      "instagram": "@bancodealimentosarmenia",
+      "x": "",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "",
+    "contact": "Lizeth Cañan",
+    "contactPhone": "3136843451",
+    "contactEmail": "pastoralsocial.armenia@gmail.com"
   },
   {
     "id": "CO.RI",
@@ -133,7 +373,22 @@
     "name": "Risaralda",
     "dane_code": "66",
     "bank": "Fundación Caritas Banco de Alimentos de Pereira",
-    "address": "Transversal 5 N°6-30 Calle de las Aromas la Badea Dosquebradas Pereira"
+    "address": "Transversal 5 N°6-30 Calle de las Aromas la Badea Dosquebradas Pereira",
+    "phone": "3154138",
+    "mobile": "3148962397",
+    "email": "bancoalimentos@caritaspereira.org",
+    "social": {
+      "facebook": "https://www.facebook.com/caritaspereirafund",
+      "instagram": "@caritaspereirafund",
+      "x": "@CaritasPereira",
+      "youtube": "@fundacioncaritaspereira",
+      "linkedin": "",
+      "tiktok": "@caritaspereirafund"
+    },
+    "website": "https://www.caritaspereira.org/banco-de-alimentos/",
+    "contact": "Diego Moncada",
+    "contactPhone": "3113895682",
+    "contactEmail": "comunicaciones@caritaspereira.org"
   },
   {
     "id": "CO.SA",
@@ -141,7 +396,22 @@
     "name": "San Andrés",
     "dane_code": "88",
     "bank": "Banco de Alimentos Bread Fruit",
-    "address": "San Luís Sector Sound Bay San Andrés"
+    "address": "San Luís Sector Sound Bay San Andrés",
+    "phone": "",
+    "mobile": "3108308316",
+    "email": "bancoalimentosbf@gmail.com",
+    "social": {
+      "facebook": "https://www.facebook.com/bancodealimentossai",
+      "instagram": "@bancodealimentossanandres",
+      "x": "@Banco_SAI",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://bancodealimentossanandres.org",
+    "contact": "P. Alexander García Rojas",
+    "contactPhone": "3243588537",
+    "contactEmail": "bancoalimentosbf@gmail.com"
   },
   {
     "id": "CO.ST",
@@ -149,7 +419,22 @@
     "name": "Santander",
     "dane_code": "68",
     "bank": "Banco de Alimentos Arquidiocesis de Bucaramanga",
-    "address": "carrera 20 # 11-46 Bucaramanga"
+    "address": "carrera 20 # 11-46 Bucaramanga",
+    "phone": "607-6805835",
+    "mobile": "317 3688405",
+    "email": "coordinacionadministrativa@bancodealimentosbga.org",
+    "social": {
+      "facebook": "https://www.facebook.com/bancodealimentosbga",
+      "instagram": "@bancodealimentosbga",
+      "x": "@alimentos_banco",
+      "youtube": "Banco de aAlimentos Bucaramanga",
+      "linkedin": "https://www.linkedin.com/company/fundaci%C3%B3n-banco-de-alimentos-bucaramanga/",
+      "tiktok": "https://www.tiktok.com/@bancodealimentosbga?_r=1&_t=ZS-91tbvr01OAm"
+    },
+    "website": "https://bancodealimentosbga.org",
+    "contact": "Valentina Rey",
+    "contactPhone": "3157896662",
+    "contactEmail": "comunicaciones@bancodealimentosbga.org"
   },
   {
     "id": "CO.SU",
@@ -157,7 +442,22 @@
     "name": "Sucre",
     "dane_code": "70",
     "bank": "Banco de Alimentos de Sincelejo",
-    "address": "CR 4 29D-108 transversal vía a tolú sector el cas Sincelejo"
+    "address": "CR 4 29D-108 transversal vía a tolú sector el cas Sincelejo",
+    "phone": "",
+    "mobile": "3014652700",
+    "email": "directorbancodealimento@sincelejo.gov.co",
+    "social": {
+      "facebook": "https://www.facebook.com/bancodealimentos.sincelejo",
+      "instagram": "Bancodealimento_sm",
+      "x": "@Banco_dealiment",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "",
+    "contact": "Gademoiselle Núñez Álvarez",
+    "contactPhone": "",
+    "contactEmail": "gninezalcaldia@gmail.com"
   },
   {
     "id": "CO.TO",
@@ -165,7 +465,22 @@
     "name": "Tolima",
     "dane_code": "73",
     "bank": "Banco Arquidiocesano de Alimentos de Ibagué",
-    "address": "Cra 4 Estadio No 23-42 Ibagué"
+    "address": "Cra 4 Estadio No 23-42 Ibagué",
+    "phone": "5151727",
+    "mobile": "3113009796",
+    "email": "bancoalimentosibague@gmail.com",
+    "social": {
+      "facebook": "https://www.facebook.com/bancodealimentosibague",
+      "instagram": "@bancodealimentosibague",
+      "x": "@BanAlimenIbague",
+      "youtube": "Banco Alimentos Ibagué",
+      "linkedin": "",
+      "tiktok": "https://www.tiktok.com/@bancodealimentosibague"
+    },
+    "website": "https://bancodealimentosibague.org/",
+    "contact": "Cristian Camilo Cuellar Trujillo",
+    "contactPhone": "3134859207",
+    "contactEmail": "comunicacionesbanalimenibague@gmail.com"
   },
   {
     "id": "CO.VC",
@@ -173,7 +488,22 @@
     "name": "Valle del Cauca",
     "dane_code": "76",
     "bank": "Fundacion Arquidiocesana Banco de Alimentos de Cali",
-    "address": "calle 24 #6-103 Cali"
+    "address": "calle 24 #6-103 Cali",
+    "phone": "8812066",
+    "mobile": "3128643566",
+    "email": "asistentededireccion@bancalimentos.org",
+    "social": {
+      "facebook": "https://www.facebook.com/bancodealimentoscali",
+      "instagram": "@bancodealimentoscali",
+      "x": "@bancalimentosca",
+      "youtube": "Banco de Alimentos de Cali",
+      "linkedin": "https://www.linkedin.com/in/bancodealimentoscali/",
+      "tiktok": "https://www.tiktok.com/@bancodealimentoscali"
+    },
+    "website": "https://www.bancodealimentoscali.org/",
+    "contact": "Melody Gallego Carvajal",
+    "contactPhone": "3187075701",
+    "contactEmail": "liderdecomunicaciones@bancalimentos.org"
   },
   {
     "id": "CO.VC",
@@ -181,7 +511,22 @@
     "name": "Valle del Cauca",
     "dane_code": "76",
     "bank": "Fundación Banco Diocesano de Alimentos de Cartago",
-    "address": "calle 6 #3-46 Cartago"
+    "address": "calle 6 #3-46 Cartago",
+    "phone": "3106951352",
+    "mobile": "3106951352",
+    "email": "bancocartago@yahoo.es",
+    "social": {
+      "facebook": "Fundación Banco Diocesano De Alimentos",
+      "instagram": "@b.diocesanodealimentoscartago",
+      "x": "",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "",
+    "contact": "",
+    "contactPhone": "3106951352",
+    "contactEmail": "bancocartago@yahoo.es"
   },
   {
     "id": "CO.VC",
@@ -189,6 +534,90 @@
     "name": "Valle del Cauca",
     "dane_code": "76",
     "bank": "Banco de Alimentos de Buenaventura",
-    "address": "Cr40 calle 5 No. 5-13 Rockefeller Buenaventura"
+    "address": "Cr40 calle 5 No. 5-13 Rockefeller Buenaventura",
+    "phone": "",
+    "mobile": "3128242832",
+    "email": "bancodealimentosbuenaventura@hotmail.com",
+    "social": {
+      "facebook": "https://www.facebook.com/bancodiocesanodealimentos",
+      "instagram": "",
+      "x": "@BDABuenaventura",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "https://diocesisdebuenaventura.com/banco-de-alimentos/",
+    "contact": "Hernan Alonso Trejos",
+    "contactPhone": "",
+    "contactEmail": "bancodealimentosbuenaventura@hotmail.com"
+  },
+  {
+    "id": "CO.UR",
+    "value": 1,
+    "name": "Urabá",
+    "dane_code": "05",
+    "bank": "Banco de Alimentos de Urabá",
+    "address": "Cra. 101 A # 83B -02 Bloque 5 B/Obrero Apartadó",
+    "phone": "",
+    "mobile": "3106329151",
+    "email": "info.uraba@saciar.org.co",
+    "social": {
+      "facebook": "",
+      "instagram": "",
+      "x": "",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "",
+    "contact": "",
+    "contactPhone": "",
+    "contactEmail": "info.uraba@saciar.org.co"
+  },
+  {
+    "id": "CO.ES",
+    "value": 1,
+    "name": "Tolima",
+    "dane_code": "73",
+    "bank": "Banco de Alimentos El Espinal",
+    "address": "Cra. 8 # 7 -59 El Espinal",
+    "phone": "",
+    "mobile": "3228850724",
+    "email": "bancodiocesanodelespinal@gmail.com",
+    "social": {
+      "facebook": "https://www.facebook.com/Banco%20de%20Alimentos%20San%20Jos%C3%A9%20Diocesis%20Espinal",
+      "instagram": "@banco_de_alimentos_espinal",
+      "x": "",
+      "youtube": "",
+      "linkedin": "",
+      "tiktok": ""
+    },
+    "website": "",
+    "contact": "P. Nelson Bermúdez",
+    "contactPhone": "315 8956529",
+    "contactEmail": "bancodiocesanodelespinal@gmail.com"
+  },
+  {
+    "id": "CO.AB",
+    "value": 1,
+    "name": "Nacional",
+    "dane_code": "00",
+    "bank": "ABACO - Asociación de Bancos de Alimentos de Colombia",
+    "address": "NA",
+    "phone": "NA",
+    "mobile": "313 2457978",
+    "email": "mercadeo@abaco.org.co",
+    "social": {
+      "facebook": "https://www.facebook.com/abacocolombia",
+      "instagram": "https://www.instagram.com/abacocolombia/",
+      "x": "https://twitter.com/Abacocol",
+      "youtube": "https://www.youtube.com/@bancosdealimentosdecolombia",
+      "linkedin": "",
+      "tiktok": "https://www.tiktok.com/@abacocolombia"
+    },
+    "website": "https://abaco.org.co/",
+    "contact": "Camila Vargas",
+    "contactPhone": "3024186880",
+    "contactEmail": "camilavargas@abaco.org.co"
   }
 ]
