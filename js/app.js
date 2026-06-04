@@ -319,7 +319,7 @@ function selectNationalBank(bank, itemElement) {
         const el = document.getElementById(id);
         const value = social[socialFields[index]];
         if (value && value.trim() !== '' && value.trim().toUpperCase() !== 'NA') {
-            el.href = value.startsWith('http') ? value : 'https://' + value;
+            el.setAttribute('href', value.startsWith('http') ? value : 'https://' + value);
             el.style.display = 'flex';
         } else {
             el.style.display = 'none';
@@ -395,7 +395,7 @@ function selectBank(bank, itemElement) {
         const el = document.getElementById(id);
         const value = social[socialFields[index]];
         if (value && value.trim() !== '' && value.trim().toUpperCase() !== 'NA') {
-            el.href = value.startsWith('http') ? value : 'https://' + value;
+            el.setAttribute('href', value.startsWith('http') ? value : 'https://' + value);
             el.style.display = 'flex';
         } else {
             el.style.display = 'none';
