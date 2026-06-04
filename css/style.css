@@ -136,6 +136,48 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+/* Sidebar Sections */
+.sidebar-section {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-section-title {
+    font-size: 0.85rem;
+    color: var(--color-grey);
+    padding: 0.8rem 1.2rem 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #eaeaea;
+}
+
+.sidebar-section-title i {
+    color: var(--color-orange);
+}
+
+.bank-list-national {
+    padding: 0.5rem 1rem 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.national-item {
+    border-left-color: var(--color-orange);
+    background: linear-gradient(135deg, #fff8f0 0%, #ffffff 100%);
+}
+
+.national-item h3 {
+    color: var(--color-orange);
+}
+
+.national-tag {
+    background-color: var(--color-orange) !important;
+    color: white !important;
+}
+
 .bank-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -252,16 +294,14 @@ body {
 
 /* Contact Section */
 .contact-section,
-.social-section,
-.contact-person-section {
+.social-section {
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid #eee;
 }
 
 .contact-section h4,
-.social-section h4,
-.contact-person-section h4 {
+.social-section h4 {
     font-size: 0.85rem;
     color: var(--color-grey);
     margin-bottom: 0.5rem;
@@ -325,15 +365,44 @@ body {
     font-size: 16px;
 }
 
-/* Contact Person */
-.contact-person-name {
-    font-weight: 600;
-    color: var(--color-grey);
+.social-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* National Info Panel */
+.info-panel-national {
+    border-top: 4px solid var(--color-orange);
+    background: linear-gradient(135deg, #ffffff 0%, #fff8f0 100%);
+}
+
+.national-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
     margin-bottom: 0.5rem;
 }
 
-.contact-person-details {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
+.national-badge {
+    background-color: var(--color-orange);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#abaco-bank-name {
+    margin: 0;
+    color: var(--color-orange);
+}
+
+.national-description {
+    color: #555;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
 }
