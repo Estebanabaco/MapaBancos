@@ -47,6 +47,7 @@ L.control.layers(baseMaps).addTo(map);
 // State variables
 let geoJsonLayer;
 let banksData = [];
+let nationalData = [];
 let departmentsLayer;
 
 // Brand Colors for Map
@@ -87,9 +88,13 @@ async function loadData() {
 
         // Load Banks JSON
         const banksResponse = await fetch('data/bancos.json');
-        banksData = await banksResponse.json();
+        const allData = await banksResponse.json();
 
-        // Extract active DANE codes
+        // Separate national (ABACO) from regional banks
+        nationalData = allData.filter(bank => bank.dane_code === '00' || bank.id === 'CO.AB');
+        banksData = allData.filter(bank => !(bank.dane_code === '00' || bank.id === 'CO.AB'));
+
+        // Extract active DANE codes (only regional)
         banksData.forEach(bank => {
             if (bank.dane_code) {
                 activeDaneCodes.add(String(bank.dane_code));
@@ -97,6 +102,7 @@ async function loadData() {
         });
 
         initMapLayer(geoData);
+        renderNationalList(nationalData);
         renderBankList(banksData);
 
     } catch (error) {
@@ -241,6 +247,93 @@ function renderBankList(banks) {
     });
 }
 
+function renderNationalList(national) {
+    const listContainer = document.getElementById('national-list');
+    listContainer.innerHTML = '';
+
+    national.forEach((bank, index) => {
+        const item = document.createElement('div');
+        item.className = 'bank-item national-item';
+        item.innerHTML = `
+            <h3><i class="fas fa-globe-americas"></i> ${bank.bank}</h3>
+            <span class="dept-tag national-tag">Nacional</span>
+        `;
+
+        item.addEventListener('click', () => {
+            selectNationalBank(bank, item);
+        });
+
+        listContainer.appendChild(item);
+    });
+}
+
+function selectNationalBank(bank, itemElement) {
+    // Highlight list item
+    document.querySelectorAll('.bank-item').forEach(el => el.classList.remove('active'));
+    itemElement.classList.add('active');
+
+    // Hide regional panel and show national panel
+    const infoPanel = document.getElementById('info-panel');
+    const abacoPanel = document.getElementById('abaco-panel');
+    if (infoPanel) infoPanel.classList.add('hidden');
+    if (abacoPanel) abacoPanel.classList.remove('hidden');
+
+    // Set bank name
+    document.getElementById('abaco-bank-name').textContent = bank.bank;
+
+    // Contact info
+    const mobileEl = document.getElementById('abaco-mobile');
+    const emailEl = document.getElementById('abaco-email');
+    const websiteEl = document.getElementById('abaco-website');
+
+    if (bank.mobile && bank.mobile !== 'NA') {
+        mobileEl.textContent = bank.mobile;
+        mobileEl.href = 'tel:' + bank.mobile;
+        document.getElementById('abaco-mobile-row').style.display = 'flex';
+    } else {
+        document.getElementById('abaco-mobile-row').style.display = 'none';
+    }
+
+    if (bank.email) {
+        emailEl.textContent = bank.email;
+        emailEl.href = 'mailto:' + bank.email;
+        document.getElementById('abaco-email-row').style.display = 'flex';
+    } else {
+        document.getElementById('abaco-email-row').style.display = 'none';
+    }
+
+    if (bank.website) {
+        websiteEl.textContent = bank.website;
+        websiteEl.href = bank.website;
+        document.getElementById('abaco-website-row').style.display = 'flex';
+    } else {
+        document.getElementById('abaco-website-row').style.display = 'none';
+    }
+
+    // Social media
+    const social = bank.social || {};
+    const socialIds = ['abaco-social-facebook', 'abaco-social-instagram', 'abaco-social-x', 'abaco-social-youtube', 'abaco-social-linkedin', 'abaco-social-tiktok'];
+    const socialFields = ['facebook', 'instagram', 'x', 'youtube', 'linkedin', 'tiktok'];
+
+    socialIds.forEach((id, index) => {
+        const el = document.getElementById(id);
+        const value = social[socialFields[index]];
+        if (value && value.trim() !== '' && value.trim().toUpperCase() !== 'NA') {
+            el.href = value.startsWith('http') ? value : 'https://' + value;
+            el.style.display = 'flex';
+        } else {
+            el.style.display = 'none';
+        }
+    });
+
+    // Reset department highlights
+    if (departmentsLayer) {
+        departmentsLayer.eachLayer(layer => {
+            departmentsLayer.resetStyle(layer);
+        });
+    }
+}
+
 function selectBank(bank, itemElement) {
     // Highlight list item
     document.querySelectorAll('.bank-item').forEach(el => el.classList.remove('active'));
@@ -248,10 +341,12 @@ function selectBank(bank, itemElement) {
 
     // Show info panel
     const infoPanel = document.getElementById('info-panel');
+    const abacoPanel = document.getElementById('abaco-panel');
     document.getElementById('info-bank-name').textContent = bank.bank;
     document.getElementById('info-bank-address').textContent = bank.address;
     document.getElementById('info-dept-name').textContent = bank.name;
     infoPanel.classList.remove('hidden');
+    if (abacoPanel) abacoPanel.classList.add('hidden');
 
     // Contact info
     const phoneEl = document.getElementById('info-phone');
@@ -291,33 +386,21 @@ function selectBank(bank, itemElement) {
         document.getElementById('info-website-row').style.display = 'none';
     }
 
-    // Contact person
-    const contactNameEl = document.getElementById('info-contact-name');
-    const contactPhoneEl = document.getElementById('info-contact-phone');
-    const contactEmailEl = document.getElementById('info-contact-email');
+    // Social media
+    const social = bank.social || {};
+    const socialIds = ['social-facebook', 'social-instagram', 'social-x', 'social-youtube', 'social-linkedin', 'social-tiktok'];
+    const socialFields = ['facebook', 'instagram', 'x', 'youtube', 'linkedin', 'tiktok'];
 
-    if (bank.contact) {
-        contactNameEl.textContent = bank.contact;
-        contactNameEl.style.display = 'block';
-    } else {
-        contactNameEl.style.display = 'none';
-    }
-
-    if (bank.contactPhone) {
-        contactPhoneEl.textContent = bank.contactPhone;
-        contactPhoneEl.href = 'tel:' + bank.contactPhone;
-        document.getElementById('info-contact-phone-row').style.display = 'flex';
-    } else {
-        document.getElementById('info-contact-phone-row').style.display = 'none';
-    }
-
-    if (bank.contactEmail) {
-        contactEmailEl.textContent = bank.contactEmail;
-        contactEmailEl.href = 'mailto:' + bank.contactEmail;
-        document.getElementById('info-contact-email-row').style.display = 'flex';
-    } else {
-        document.getElementById('info-contact-email-row').style.display = 'none';
-    }
+    socialIds.forEach((id, index) => {
+        const el = document.getElementById(id);
+        const value = social[socialFields[index]];
+        if (value && value.trim() !== '' && value.trim().toUpperCase() !== 'NA') {
+            el.href = value.startsWith('http') ? value : 'https://' + value;
+            el.style.display = 'flex';
+        } else {
+            el.style.display = 'none';
+        }
+    });
 
     // Highlight map department
     if (bank.dane_code) {

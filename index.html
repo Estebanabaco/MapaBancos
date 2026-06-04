@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -38,13 +40,83 @@
                         Restablecer vista inicial
                     </button>
                 </div>
-                <div id="bank-list" class="bank-list">
-                    <!-- Banks will be loaded here via JS -->
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-section-title">
+                        <i class="fas fa-globe-americas"></i> Nacional
+                    </h3>
+                    <div id="national-list" class="bank-list-national">
+                        <!-- Nacional (ABACO) will be loaded here via JS -->
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-section-title">
+                        <i class="fas fa-map-marker-alt"></i> Regionales
+                    </h3>
+                    <div id="bank-list" class="bank-list">
+                        <!-- Banks will be loaded here via JS -->
+                    </div>
                 </div>
             </aside>
 
             <section class="map-section">
                 <div id="map"></div>
+
+                <div id="abaco-panel" class="info-panel info-panel-national hidden">
+                    <div class="national-header">
+                        <span class="national-badge">Nacional</span>
+                        <h3 id="abaco-bank-name">ABACO</h3>
+                    </div>
+                    <p class="national-description">
+                        Asociación de Bancos de Alimentos de Colombia - Red que agrupa a todos los bancos de alimentos del país.
+                    </p>
+
+                    <div class="contact-section">
+                        <h4>Contacto</h4>
+                        <div class="contact-items">
+                            <div id="abaco-mobile-row" class="contact-item">
+                                <span class="contact-label">Celular:</span>
+                                <a id="abaco-mobile" href="#"></a>
+                            </div>
+                            <div id="abaco-email-row" class="contact-item">
+                                <span class="contact-label">Email:</span>
+                                <a id="abaco-email" href="#"></a>
+                            </div>
+                            <div id="abaco-website-row" class="contact-item">
+                                <span class="contact-label">Web:</span>
+                                <a id="abaco-website" href="#" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h4>Redes Sociales</h4>
+                        <div class="social-links">
+                            <a id="abaco-social-facebook" href="#" target="_blank" class="social-icon" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a id="abaco-social-instagram" href="#" target="_blank" class="social-icon" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a id="abaco-social-x" href="#" target="_blank" class="social-icon" title="X (Twitter)">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                            </a>
+                            <a id="abaco-social-youtube" href="#" target="_blank" class="social-icon" title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a id="abaco-social-linkedin" href="#" target="_blank" class="social-icon" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a id="abaco-social-tiktok" href="#" target="_blank" class="social-icon" title="TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="info-panel" class="info-panel hidden">
                     <h3 id="info-bank-name">Nombre del Banco</h3>
                     <p id="info-bank-address">Dirección del Banco</p>
@@ -72,18 +144,29 @@
                         </div>
                     </div>
 
-                    <div class="contact-person-section">
-                        <h4>Responsable de Comunicaciones</h4>
-                        <div id="info-contact-name" class="contact-person-name"></div>
-                        <div class="contact-person-details">
-                            <div id="info-contact-phone-row" class="contact-item">
-                                <span class="contact-label">Cel:</span>
-                                <a id="info-contact-phone" href="#"></a>
-                            </div>
-                            <div id="info-contact-email-row" class="contact-item">
-                                <span class="contact-label">Email:</span>
-                                <a id="info-contact-email" href="#"></a>
-                            </div>
+                    <div class="social-section">
+                        <h4>Redes Sociales</h4>
+                        <div class="social-links">
+                            <a id="social-facebook" href="#" target="_blank" class="social-icon" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a id="social-instagram" href="#" target="_blank" class="social-icon" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a id="social-x" href="#" target="_blank" class="social-icon" title="X (Twitter)">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                            </a>
+                            <a id="social-youtube" href="#" target="_blank" class="social-icon" title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a id="social-linkedin" href="#" target="_blank" class="social-icon" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a id="social-tiktok" href="#" target="_blank" class="social-icon" title="TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
