@@ -326,6 +326,23 @@ function selectNationalBank(bank, itemElement) {
         }
     });
 
+    // Anniversary
+    if (bank.anniversary) {
+        const anniversaryText = `${bank.anniversary.day} de ${bank.anniversary.month} ${bank.anniversary.year}`;
+        document.getElementById('abaco-anniversary').textContent = anniversaryText;
+        document.getElementById('abaco-anniversary-row').style.display = 'flex';
+    } else {
+        document.getElementById('abaco-anniversary-row').style.display = 'none';
+    }
+
+    // Constitution date
+    if (bank.constitution_date) {
+        document.getElementById('abaco-constitution').textContent = bank.constitution_date;
+        document.getElementById('abaco-constitution-row').style.display = 'flex';
+    } else {
+        document.getElementById('abaco-constitution-row').style.display = 'none';
+    }
+
     // Reset department highlights
     if (departmentsLayer) {
         departmentsLayer.eachLayer(layer => {
@@ -401,6 +418,23 @@ function selectBank(bank, itemElement) {
             el.style.display = 'none';
         }
     });
+
+    // Anniversary
+    if (bank.anniversary) {
+        const anniversaryText = `${bank.anniversary.day} de ${bank.anniversary.month} ${bank.anniversary.year}`;
+        document.getElementById('info-anniversary').textContent = anniversaryText;
+        document.getElementById('info-anniversary-row').style.display = 'flex';
+    } else {
+        document.getElementById('info-anniversary-row').style.display = 'none';
+    }
+
+    // Constitution date
+    if (bank.constitution_date) {
+        document.getElementById('info-constitution').textContent = bank.constitution_date;
+        document.getElementById('info-constitution-row').style.display = 'flex';
+    } else {
+        document.getElementById('info-constitution-row').style.display = 'none';
+    }
 
     // Highlight map department
     if (bank.dane_code) {

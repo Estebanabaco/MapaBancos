@@ -123,6 +123,7 @@ body {
     flex: 1;
     overflow-y: auto;
     padding: 1rem;
+    min-height: 0;
 }
 
 .bank-item {
@@ -138,7 +139,21 @@ body {
 
 /* Sidebar Sections */
 .sidebar-section {
+    display: flex;
+    flex-direction: column;
     border-bottom: 1px solid #e0e0e0;
+}
+
+/* Nacional section - compact, no expand */
+.sidebar-section:has(.bank-list-national) {
+    flex: 0 0 auto;
+}
+
+/* Regionales section - takes all remaining space */
+.sidebar-section:has(.bank-list) {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
 }
 
 .sidebar-section-title {
@@ -159,7 +174,7 @@ body {
 }
 
 .bank-list-national {
-    padding: 0.5rem 1rem 1rem;
+    padding: 0.5rem 1rem;
     overflow-y: visible;
 }
 
@@ -404,4 +419,37 @@ body {
     font-size: 0.9rem;
     font-style: italic;
     margin-bottom: 0.5rem;
+}
+
+/* Info Details Section (Anniversary, Constitution) */
+.info-details-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.info-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.info-detail-label {
+    color: #888;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.info-detail-label i {
+    color: var(--color-orange);
+    font-size: 0.85rem;
+}
+
+.info-detail-value {
+    color: var(--color-grey);
+    font-weight: 500;
 }
