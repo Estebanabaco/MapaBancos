@@ -196,6 +196,27 @@ body {
     color: #aaa;
 }
 
+.search-clear-btn {
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.search-clear-btn:hover {
+    color: var(--color-orange);
+}
+
 .sidebar-section-title {
     font-size: 0.85rem;
     color: var(--color-grey);
