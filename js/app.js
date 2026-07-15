@@ -461,10 +461,36 @@ function resetMapView() {
 
     // 4. Reload full bank list
     renderBankList(banksData);
+
+    // 5. Clear search input
+    const searchInput = document.getElementById('bank-search');
+    if (searchInput) searchInput.value = '';
+}
+
+// Search/Filter function
+function filterBanks() {
+    const searchInput = document.getElementById('bank-search');
+    const query = searchInput.value.toLowerCase().trim();
+
+    if (query === '') {
+        renderBankList(banksData);
+        return;
+    }
+
+    const filtered = banksData.filter(bank => {
+        const name = bank.bank.toLowerCase();
+        const dept = bank.name.toLowerCase();
+        return name.includes(query) || dept.includes(query);
+    });
+
+    renderBankList(filtered);
 }
 
 // Event listener for reset button
 document.getElementById('reset-btn').addEventListener('click', resetMapView);
+
+// Event listener for search input
+document.getElementById('bank-search').addEventListener('input', filterBanks);
 
 // Start
 loadData();
