@@ -492,5 +492,11 @@ document.getElementById('reset-btn').addEventListener('click', resetMapView);
 // Event listener for search input
 document.getElementById('bank-search').addEventListener('input', filterBanks);
 
+// Event listener for search clear button
+document.getElementById('search-clear').addEventListener('click', function() {
+    document.getElementById('bank-search').value = '';
+    renderBankList(banksData);
+});
+
 // Start
 loadData();
